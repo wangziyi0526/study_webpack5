@@ -1,0 +1,40 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: aqua;
+  color: #fff;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: red;
+}
+.img {
+  width: 100px;
+  height: 100px;
+  color: red;
+}
+
+p {
+  color: #be17a8;
+  width: 300px;
+  height: 300px;
+  display: block;
+  text-align: center;
+  line-height: 300px;
+  background: url(../img/a.aed2.jpg);
+}
+
+.lalal {
+  width: 100px;
+  height: 300px;
+}
+.lalal span {
+  color: #9acd32;
+  font-size: 40px;
+}
+

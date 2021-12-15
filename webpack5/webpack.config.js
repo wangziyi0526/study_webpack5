@@ -1,59 +1,3 @@
-# webpack 学习记录
-
-文件夹 `webpack5` 为基于webpack5来进行学习配置的项目
-涉及到以下集中类型文件的处理：
-
-1. html
-2. css
-3. es6
-4. less
-5. scss
-6. 图片
-
-**package.json**
-```json
-{
-  "name": "study_webpack",
-  "version": "1.0.0",
-  "description": "学习webpack",
-  "main": "index.js",
-  "scripts": {
-    "dev": "cross-env NODE_ENV=dev webpack serve --mode development",
-    "test": "cross-env NODE_ENV=test webpack --mode production",
-    "build": "cross-env NODE_ENV=prod webpack --mode production",
-    "serve": "cross-env NODE_ENV=prod webpack-dev-server --mode development"
-  },
-  "author": "Charles",
-  "license": "ISC",
-  "dependencies": {
-    "-": "0.0.1",
-    "D": "^1.0.0",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.5",
-    "@babel/plugin-transform-runtime": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "babel-loader": "^8.2.3",
-    "clean-webpack-plugin": "^4.0.0",
-    "cross-env": "^7.0.3",
-    "css-loader": "^6.5.1",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "less": "^4.1.2",
-    "less-loader": "^10.2.0",
-    "mini-css-extract-plugin": "^2.4.5",
-    "sass": "^1.45.0",
-    "sass-loader": "^12.4.0",
-    "style-loader": "^3.3.1",
-    "url-loader": "^4.1.1",
-    "webpack-dev-server": "^4.6.0"
-  }
-}
-```
-**webpack.config.js**
-```js
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -81,6 +25,7 @@ const config = {
             "~": path.resolve(__dirname, "./public"),
         },
     },
+
     stats: {
         errorDetails: false,
     },
@@ -157,5 +102,3 @@ module.exports = (env, argv) => {
     // 这里可以通过不同的模式修改 config 配置
     return config
 }
-
-```
